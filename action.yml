@@ -1,0 +1,5 @@
+name: 'Sample NodeJS Action'
+description: 'Tests NodeJS installation'
+runs:
+  using: 'node16'
+  main: 'index.js'
