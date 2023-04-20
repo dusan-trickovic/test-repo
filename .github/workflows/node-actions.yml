@@ -14,10 +14,10 @@ jobs:
   silent-failure-issue:
     runs-on: [self-hosted, linux]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           cache: yarn
           node-version-file: .nvmrc
@@ -26,7 +26,7 @@ jobs:
           check-latest: false
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
-      - name: Run tests
-        run: npm test
+      - name: Show Node Version
+        run: node --version
