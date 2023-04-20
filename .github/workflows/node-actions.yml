@@ -14,6 +14,7 @@ jobs:
   silent-failure-issue:
     runs-on: [self-hosted, linux]
     steps:
+    
       - uses: actions/checkout@v3
 
       - name: Use Node.js
