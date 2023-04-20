@@ -1,0 +1,32 @@
+name: "Demo NodeJS Action"
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  silent-failure-issue:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          node-version-file: .nvmrc
+          registry-url: https://npm.pkg.github.com/
+          always-auth: false
+          check-latest: false
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
