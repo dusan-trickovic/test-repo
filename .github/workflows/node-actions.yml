@@ -14,9 +14,12 @@ jobs:
   silent-failure-issue:
     runs-on: [self-hosted, linux]
     steps:
-    
+
       - uses: actions/checkout@v3
 
+      - name: Install ZSTD dependency
+        run: sudo apt-get install -y zstd
+        
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
