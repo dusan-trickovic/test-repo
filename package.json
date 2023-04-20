@@ -1,0 +1,11 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dusan-trickovic/test-repo.git",
+  "author": "Dusan Trickovic <dusan.trickovic@akvelon.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
