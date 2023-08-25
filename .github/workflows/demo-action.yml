@@ -9,7 +9,7 @@ on:
 
 jobs:
     build:
-        runs-on: [self-hosted, dusan-linux-test, 25-08]
+        runs-on: [self-hosted, testing-self-hosted]
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v3
