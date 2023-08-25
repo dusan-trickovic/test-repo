@@ -3,9 +3,7 @@ name: Install Node and Run Code
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
     build:
