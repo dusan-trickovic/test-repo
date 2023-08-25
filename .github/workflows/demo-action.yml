@@ -1,0 +1,25 @@
+name: Install Node and Run Code
+
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+    build:
+        runs-on: [self-hosted, dusan-linux-test, 25-08]
+        steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v3
+        
+        - name: Install Node
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18.x
+        
+        - name: Run Code
+          run: |
+            npm install
+            npm run start

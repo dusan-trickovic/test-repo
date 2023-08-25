@@ -1,6 +1,10 @@
 {
   "name": "test-repo",
   "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
   "main": "index.js",
   "repository": "https://github.com/dusan-trickovic/test-repo.git",
   "author": "Dusan Trickovic <dusan.trickovic@akvelon.com>",
